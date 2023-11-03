@@ -32,8 +32,13 @@ function update() {
     context.fillStyle="black"; //gives color to the bord
     context.fillRect(0, 0, board.height, board.width); // this make it start filling the color from point 0,0 of the board
 
+
     context.fillStyle="red"; //color for the food
     context.fillRect(foodX, foodY, blockSize, blockSize); // place for the snakes food
+
+    if (snakeX == foodX && snakeY == foodY) {
+        placeFood();
+    }
 
     context.fillStyle="blue"; // color for the snake
     snakeX += velocityX * blockSize; // making snake speed X axis faster
@@ -43,19 +48,19 @@ function update() {
 
 // movement for snake
 function changeDirection(e) {
-    if (e.code == "ArrowUp"){
+    if (e.code == "ArrowUp" && velocityY != 1) {
         velocityX = 0;
         velocityY = -1;
     }
-    else if (e.code == "ArrowDown"){
+    else if (e.code == "ArrowDown" && velocityY != -1) {
         velocityX = 0;
         velocityY = 1
     }
-    else if (e.code == "ArrowLeft"){
+    else if (e.code == "ArrowLeft" && velocityX != 1) {
         velocityX = -1;
         velocityY = 0;
     }
-    else if (e.code == "ArrowRight"){
+    else if (e.code == "ArrowRight" && velocityX != -1) {
         velocityX = 1;
         velocityY = 0;
     }

@@ -63,6 +63,6 @@ function changeDirection(e) {
 
 // randomized placement for the food
 function placeFood() {
-    foodY = math.floor(math.random() * rows) * blockSize;
-    foodX = math.floor(math.random() * cols) * blockSize;
+    foodY = Math.floor(Math.random() * rows) * blockSize;
+    foodX = Math.floor(Math.random() * cols) * blockSize;
 }

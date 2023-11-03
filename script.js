@@ -10,15 +10,16 @@ var snakeY = blockSize * 5;
 var snakeX = blockSize * 5;
 
 //the snakes food
-var foodY = blockSize * 10;
-var foodX = blockSize * 10;
+var foodY;
+var foodX;
 
 window.onload = function() {
     board = document.getElementById("board");
     board.height = rows * blockSize;
     board.width = cols * blockSize;
     context = board.getContext("2d"); //this is used for the drawing on the board
-
+    
+    placeFood();
     update();
 }
 
@@ -31,4 +32,10 @@ function update() {
 
     context.fillStyle="red"; //color for the food
     context.fillRect(foodY, foodX, blockSize, blockSize); // place for the snakes food
+}
+
+// randomized placement for the food
+function placeFood() {
+    foodY = math.floor(math.random() * rows) * blockSize;
+    foodX = math.floor(math.random() * cols) * blockSize;
 }

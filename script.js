@@ -24,7 +24,7 @@ window.onload = function() {
     
     placeFood();
     document.addEventListener("keyup", changeDirection);
-    //update();
+    //update(); is gone since i want to call it moltiple times
     setInterval(update, 1000/10); // update placement in canvas every 100 milliseconds
 }
 
@@ -33,8 +33,8 @@ function update() {
     context.fillRect(0, 0, board.height, board.width); // this make it start filling the color from point 0,0 of the board
 
     context.fillStyle="blue"; // color for the snake
-    snakeX += velocityX;
-    snakeY += velocityY;
+    snakeX += velocityX * blockSize; // making snake speed X axis faster
+    snakeY += velocityY * blockSize; // -:- but Y axis
     context.fillRect(snakeX, snakeY, blockSize, blockSize); // place for the snake
 
     context.fillStyle="red"; //color for the food

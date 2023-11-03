@@ -9,6 +9,9 @@ var context;
 var snakeY = blockSize * 5;
 var snakeX = blockSize * 5;
 
+var velocityY = 0;
+var velocityX = 0;
+
 //the snakes food
 var foodY;
 var foodX;
@@ -20,7 +23,9 @@ window.onload = function() {
     context = board.getContext("2d"); //this is used for the drawing on the board
     
     placeFood();
-    update();
+    document.addEventListener("keyup", changeDirection);
+    //update();
+    setInterval(update, 1000/10); // update placement in canvas every 100 milliseconds
 }
 
 function update() {
@@ -28,10 +33,32 @@ function update() {
     context.fillRect(0, 0, board.height, board.width); // this make it start filling the color from point 0,0 of the board
 
     context.fillStyle="blue"; // color for the snake
+    snakeY += velocityY;
+    snakeX += velocityX;
     context.fillRect(snakeY, snakeX, blockSize, blockSize); // place for the snake
 
     context.fillStyle="red"; //color for the food
     context.fillRect(foodY, foodX, blockSize, blockSize); // place for the snakes food
+}
+
+// movement for snake
+function changeDirection(e) {
+    if (e.code == "ArrowUp"){
+        velocityY = -1;
+        velocityX = 0;
+    }
+    else if (e.code == "ArrowDown"){
+        velocityY = 1;
+        velocityX = 0;
+    }
+    else if (e.code == "ArrowLeft"){
+        velocityY = 0;
+        velocityX = -1;
+    }
+    else if (e.code == "ArrowRight"){
+        velocityY = 0;
+        velocityX = 1;
+    }
 }
 
 // randomized placement for the food

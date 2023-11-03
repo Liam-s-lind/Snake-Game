@@ -6,15 +6,15 @@ var board;
 var context;
 
 //the snakes head
-var snakeY = blockSize * 5;
 var snakeX = blockSize * 5;
+var snakeY = blockSize * 5;
 
-var velocityY = 0;
 var velocityX = 0;
+var velocityY = 0;
 
 //the snakes food
-var foodY;
 var foodX;
+var foodY;
 
 window.onload = function() {
     board = document.getElementById("board");
@@ -33,12 +33,12 @@ function update() {
     context.fillRect(0, 0, board.height, board.width); // this make it start filling the color from point 0,0 of the board
 
     context.fillStyle="blue"; // color for the snake
-    snakeY += velocityY;
     snakeX += velocityX;
-    context.fillRect(snakeY, snakeX, blockSize, blockSize); // place for the snake
+    snakeY += velocityY;
+    context.fillRect(snakeX, snakeY, blockSize, blockSize); // place for the snake
 
     context.fillStyle="red"; //color for the food
-    context.fillRect(foodY, foodX, blockSize, blockSize); // place for the snakes food
+    context.fillRect(foodX, foodY, blockSize, blockSize); // place for the snakes food
 }
 
 // movement for snake

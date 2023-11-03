@@ -41,6 +41,13 @@ function update() {
         snakeBody.push([foodX, foodY])
         placeFood();
     }
+    //body moving along with head
+    for (let i = snakeBody.length-1; i > 0; i--) {
+        snakeBody[i] = snakeBody[i-1];
+    }
+    if (snakeBody.length) {
+        snakeBody[0] = [snakeX, snakeY];
+    }
 
     context.fillStyle="blue"; // color for the snake
     snakeX += velocityX * blockSize; // making snake speed X axis faster

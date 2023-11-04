@@ -7,29 +7,3 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
-
-.overlay {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    z-index: 1;
-}
-
-#start-button, #restart-button {
-    background: #0077b6;
-    color: #ffffff;
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#start-button:hover, #restart-button:hover {
-    background: #00507a;
-}

@@ -20,6 +20,16 @@ var foodY;
 
 var gameOver = false;
 
+// Function to disable scrolling
+function disableScrolling() {
+    document.body.style.overflow = "hidden";
+}
+
+// Function to enable scrolling
+function enableScrolling() {
+    document.body.style.overflow = "auto";
+}
+
 window.onload = function() {
     board = document.getElementById("board");
     board.height = rows * blockSize;
@@ -28,12 +38,14 @@ window.onload = function() {
     
     placeFood();
     document.addEventListener("keyup", changeDirection);
+    disableScrolling(); // Call this function to disable scrolling when the game starts
     //update(); is gone since i want to call it moltiple times
     setInterval(update, 1000/10); // update placement in canvas every 100 milliseconds
 }
 
 function update() {
     if (gameOver) {
+        enableScrolling(); // Call this function to enable scrolling when the game is over
         return;
     }
     context.fillStyle="black"; //gives color to the bord
@@ -66,6 +78,7 @@ function update() {
     //Condition for game over
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
+        enableScrolling(); // Call this function to enable scrolling when the game is over
         alert("You Lose!")
     }
 

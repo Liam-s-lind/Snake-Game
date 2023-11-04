@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     text-align: center;
-    background-image: url('Snake-Skin.png');
+    background-image: url('assets/images/Snake-Skin.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

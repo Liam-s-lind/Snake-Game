@@ -7,10 +7,12 @@
   - [Prerequisites](#prerequisites)
 - [Game Instructions](#game-instructions)
 - [Code Organization](#codeorganization)
+- [Code Validators](#codevalidators)
 
 # Introduction
 
-+ Welcome to the Snake Game! This simple classic game allows you to control a snake and collect food to grow while avoiding collisions with the walls and yourself. This repository contains the code for the Snake Game implemented in HTML, CSS, and JavaScript.
+## Welcome to the Snake Game! 
++ This simple classic game allows you to control a snake and collect food to grow while avoiding collisions with the walls and yourself. This repository contains the code for the Snake Game implemented in HTML, CSS, and JavaScript.
 
 ![Alt Text](README.img/Snake-pic.png)
 
@@ -36,7 +38,7 @@ Before you can run the game, you'll need a web browser that supports HTML5 and J
 
 ## HTML: 
 
-<img src="README.img/htmll.png" alt="Alt Text" width="60" height="70">
+<img src="README.img/htmll.png" alt="Alt Text" width="65" height="90">
 
 + Header Section: Contains a title and a div element with the class "header-content."
 
@@ -48,7 +50,7 @@ Before you can run the game, you'll need a web browser that supports HTML5 and J
 
 ## CSS: 
 
-<img src="README.img/csss.png" alt="Alt Text" width="70" height="70">
+<img src="README.img/csss.png" alt="Alt Text" width="70" height="90">
 
 + Body Styles:
 The first section focuses on the body element, affecting the overall appearance of your entire webpage. It sets the font family, text alignment, and establishes a background image to create an appealing visual backdrop for your content. The image is designed to cover the entire viewport, remain fixed in place, and centered both horizontally and vertically.
@@ -70,7 +72,7 @@ The final section includes various additional styles. The my-footer class ensure
 
 ## JavaScript:
 
-<img src="README.img/Javaa.png" alt="Alt Text" width="50" height="60">
+<img src="README.img/Javaa.png" alt="Alt Text" width="75" height="80">
 
 + JavaScript Code Organization:
 In the JavaScript code for your Snake game, various sections are organized to control different aspects of the game's behavior:
@@ -98,3 +100,8 @@ User input is handled by the changeDirection function, which responds to keypres
 
 + Food Placement:
 The placeFood function is responsible for randomly positioning the snake's food within the game board, ensuring it's placed within a block.
+
+# Code Validation
+
+<img src="README.img/Validation.png" alt="Alt Text" width="150" height="65">
+

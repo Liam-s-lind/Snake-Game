@@ -8,6 +8,16 @@ body {
     background-position: center;
 }
 
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -18,3 +28,21 @@ body::before {
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control the dimness */
     z-index: -1;
   }
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 81px;
+}
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}

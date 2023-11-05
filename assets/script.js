@@ -32,6 +32,10 @@ window.onload = function() {
     setInterval(update, 1000/10); // update placement in canvas every 100 milliseconds
 }
 
+function showGameOverAlert() {
+    location.reload();
+}
+
 function update() {
     if (gameOver) {
         return;
@@ -66,13 +70,13 @@ function update() {
     //Condition for game over
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
-        alert("You Lose!")
+        showGameOverAlert();
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert("You Lose!")
+            showGameOverAlert();
         }
     }
 }
@@ -85,7 +89,7 @@ function changeDirection(e) {
     }
     else if (e.code == "ArrowDown" && velocityY != -1) {
         velocityX = 0;
-        velocityY = 1
+        velocityY = 1;
     }
     else if (e.code == "ArrowLeft" && velocityX != 1) {
         velocityX = -1;

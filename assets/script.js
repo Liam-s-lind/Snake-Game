@@ -33,6 +33,7 @@ window.onload = function() {
 }
 
 function showGameOverAlert() {
+    alert("You Lose, try again!");
     location.reload();
 }
 

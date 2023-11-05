@@ -33,7 +33,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 81px;
+    margin-top: 82px;
 }
 
   footer {
@@ -45,4 +45,38 @@ body::before {
     right: 0;
     width: 100%;
     text-align: center;
+}
+
+.my-footer {
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the social icons */
+.social-links a img {
+    width: 15px; /* Adjust the size as needed */
+    height: 15px; /* Adjust the size as needed */
+}
+
+/* Add spacing between the social icons */
+.social-links a + a {
+    margin-left: 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
 }

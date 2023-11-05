@@ -6,8 +6,10 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
 - [Game Instructions](#game-instructions)
-- [Code Organization](#codeorganization)
-- [Code Validators](#codevalidators)
+- [Code Organization](#code-organization)
+- [Directory Structure](#directory-structure)
+- [File Naming](#file-naming)
+- [Code Validation](#code-validation)
 
 # Introduction
 
@@ -15,6 +17,7 @@
 + This simple classic game allows you to control a snake and collect food to grow while avoiding collisions with the walls and yourself. This repository contains the code for the Snake Game implemented in HTML, CSS, and JavaScript.
 
 ![Alt Text](README.img/Snake-pic.png)
+
 
 # Website Goals
 
@@ -33,6 +36,31 @@ Before you can run the game, you'll need a web browser that supports HTML5 and J
 
 <img src="README.img/htmll.png" alt="Alt Text" width="75" height="100">
 <img src="README.img/Javaa.png" alt="Alt Text" width="75" height="80">
+
+# Directory Structure
+
+project-root/
+├── assets/ # Contains all static files.
+│ ├── css/ # Stylesheet files.
+│ │ └── style.css
+│ │
+│ ├── icons/ # Social media icons.
+│ │ ├── facebook.png
+│ │ ├── instagram.png
+│ │ ├── twitter.png
+│ │
+│ ├── images/ # Background images for the game.
+│ │ └── Snake-Skin.png
+│ │
+│ ├── script.js # JavaScript logic for the game.
+│
+└── README.md # Documentation for my project.
+This structured approach makes it easy to locate and manage different types of files within your project, promoting cross-platform compatibility and maintainability.
+
+## File Naming:
+
+All files are consistently and descriptively named, without spaces or capitalization, to ensure compatibility across different platforms.
+
 
 # Code Organization
 

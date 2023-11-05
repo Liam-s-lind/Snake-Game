@@ -28,12 +28,11 @@ window.onload = function() {
     
     placeFood();
     document.addEventListener("keyup", changeDirection);
-    //update(); is gone since i want to call it moltiple times
     setInterval(update, 1000/10); // update placement in canvas every 100 milliseconds
 }
 
 function showGameOverAlert() {
-    alert("You Lose, try again!");
+    alert("You Lose!");
     location.reload();
 }
 
